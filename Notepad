@@ -1,0 +1,19 @@
+After terraform apply.
+
+#Update Kuve config by entering below command
+aws eks update-kubeconfig --name my-eks-cluster --region us-east-1
+
+#To view the config file
+cat  /home/ubuntu/.kube/config
+
+#To view the list of worker nodes
+kubectl get nodes
+kubectl get ns
+
+#To deploy to your Kubernetes cluster
+kubectl create deployment nginx --image=nginx
+
+#To view Deployments
+kubectl get deployments
+
+#You can now delete your cluster with terraform destroy.
